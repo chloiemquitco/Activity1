@@ -1,0 +1,54 @@
+<mvc:View xmlns:form="sap.ui.layout.form" controllerName="project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:sap.ui.layout.form="sap.ui.layout.form">
+    <Page id="page" title="{i18n>title}">
+        <content>
+        <sap.ui.layout.form:SimpleForm id="form0">
+
+            <sap.ui.layout.form:content>
+            <VBox id="vbox1" alignItems="Center" justifyContent="Center">
+                
+                <HBox id="hbox2" alignItems="Center">
+                <Label id="Name" text="Name:" width="100px"/>
+                <Input id="inName" value="" width="500px"/>
+                </HBox>
+
+                <HBox id="hbox3" alignItems="Center" >
+                <Label id="StreetNo" text="Street/No:" width="100px"/>
+                <Input id="inStreet" value="" width="300px"/>
+                <Input id="inNo" value="" width="200px"/>
+                </HBox>
+
+                <HBox id="hbox4" alignItems="Center">
+                <Label id="ZipcodeCity" text="Zipcode/City:" width="100px"/>
+                <Input id="inZipcode" value="" width="200px"/>
+                <Input id="inCity" value="" width="300px"/>
+                </HBox>
+
+                <HBox id="hbox5" alignItems="Center">
+                <Label id="Country" text="Country:" width="100px"/>
+                    <Select id="countrySelect" selectedKey="EN" width="500px">
+                    <items>
+                          <core:Item id="EN" key="EN" text="England" />
+                           <core:Item id="DE" key="DE" text="Germany" />
+                           <core:Item id="US" key="US" text="USA" />
+                           <core:Item id="PH" key="PH" text="Philippines" />
+                    </items>
+                    </Select>
+                </HBox>
+            </VBox>
+            </sap.ui.layout.form:content>
+        </sap.ui.layout.form:SimpleForm>
+
+        <sap.ui.layout.form:SimpleForm id="form1">
+            <HBox id="hbox6" justifyContent="End">
+                <Button id="btn01" text="Save" press="onSavePress" type="Accept"/>
+                <Button id="btn02" text="Clear" press="onClearPress" type="Reject" class="sapUiSmallMarginBegin"/>
+            </HBox>
+        </sap.ui.layout.form:SimpleForm>
+
+        </content>
+    </Page>
+</mvc:View>
